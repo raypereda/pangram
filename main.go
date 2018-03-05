@@ -144,13 +144,13 @@ func toString(c count) string {
 	var b bytes.Buffer
 	b.WriteString(prefix)
 
-	for i := 97; i < 98; i++ {
+	for i := 97; i < 99; i++ {
 		//	for i := 97; i < 122; i++ {
 		fmt.Printf("%q 's %s\n", i, spellout(c[i]))
 		num := spellout(c[i])
 		b.WriteString(num)
 		b.WriteString(" ")
-		letter := fmt.Sprintf("%qs", i)
+		letter := fmt.Sprintf("%qs, ", i)
 		withoutFirstQuote := letter[1:]
 		b.WriteString(withoutFirstQuote)
 
